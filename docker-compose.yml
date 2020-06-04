@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    image: naval-battle-server:development
+    # volumes:
+    #   - ./:/app
+    env_file: development.env
+    ports:
+      - "${PORT}:${PORT}"
+    restart: unless-stopped
